@@ -11,13 +11,13 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
 ![Platforms](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)
 
-This repository contains Jupyter notebooks and datasets required to reproduce the figures in:
+This repository provides Jupyter notebooks and datasets necessary to reproduce the figures from the RISK publication.
 
-**Horecka & Röst, "RISK: a next-generation tool for biological network annotation and visualization", Bioinformatics, 2024.** [DOI: 10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
+**Horecka et al., "RISK: a next-generation tool for biological network annotation and visualization", Bioinformatics, 2025.** [DOI: 10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
 
 ## Repository Structure
 
-- **risk_network/** – Notebooks and data for RISK analysis
+- **risk_network/** – Jupyter notebooks and processed datasets for RISK analyses, including clustering, annotation, and visualization.
   - `fig_1_supp_fig_3_6_7_8.ipynb`
   - `supp_fig_10.ipynb`
   - `supp_fig_1_4.ipynb`
@@ -28,7 +28,7 @@ This repository contains Jupyter notebooks and datasets required to reproduce th
 - **safe_network/** – Notebooks and data for SAFE analysis
   - `supp_fig_10.ipynb`
   - `supp_fig_1_2_3.ipynb`
-  - `data/` – SAFE-related datasets
+  - `data/` – Datasets processed for SAFE analysis.
   - `safepy/` – SAFE utilities
 
 ## Installation
@@ -45,7 +45,7 @@ Download and install Python 3.8 or higher from the official
 
 ### Step 2: Create a Virtual Environment (Recommended)
 
-Creating a virtual environment helps manage dependencies.
+Set up a virtual environment to manage dependencies for RISK:
 
 - **Windows:**
   
@@ -63,7 +63,7 @@ Creating a virtual environment helps manage dependencies.
 
 ### Step 3: Configure Jupyter Notebook to Use the Virtual Environment
 
-To make sure Jupyter recognizes the virtual environment, follow  
+Ensure Jupyter recognizes the virtual environment by following  
 [this guide](https://janakiev.com/blog/jupyter-virtual-envs/).
 
 Then, select the environment inside Jupyter Notebook:
@@ -94,21 +94,20 @@ jupyter notebook
 
 ## Figure Reproduction
 
-Each notebook corresponds to figures in the manuscript:
+The following Jupyter notebooks generate the manuscript figures:
 
 - `fig_1_supp_fig_3_6_7_8.ipynb` – Yeast PPI network analysis
 - `supp_fig_10.ipynb` – Benchmarking execution time and memory usage
 - `supp_fig_1_4.ipynb` – Genetic interaction network results
 - `supp_fig_2_5.ipynb` – Additional cluster comparisons
-- `supp_fig_9.ipynb` – High-energy physics citation network
+- `supp_fig_9.ipynb` – Analysis of the high-energy physics citation network, demonstrating RISK’s applicability beyond biological systems.
 
 ## Citation
 
-If this repository or RISK contributes to your research, please cite the following:
+If you use RISK in your research, please cite:
 
-**Horecka & Röst, "RISK: a next-generation tool for biological network annotation and visualization", Bioinformatics, 2024.**  
-[DOI: 10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
+**Horecka et al.**, "RISK: a next-generation tool for biological network annotation and visualization", **Bioinformatics**, 2025. DOI: [10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
 
 ## License
 
-This repository is released under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
+This repository follows the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
