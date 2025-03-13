@@ -1,0 +1,10 @@
+fa2_modified
+matplotlib
+networkx
+numpy
+pandas
+requests
+risk-network
+scikit-learn
+scipy
+statsmodels
