@@ -110,4 +110,4 @@ If you use RISK in your research, please cite:
 
 ## License
 
-This repository follows the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
+This tutorial follows the [MIT License](https://raw.githubusercontent.com/riskportal/network-publication/refs/heads/main/LICENSE?token=GHSAT0AAAAAACYL5VO637BFR7LYQDR57AYQZ6TBTJA).
