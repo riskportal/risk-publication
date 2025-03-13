@@ -8,8 +8,8 @@
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-yellow)
 ![License](https://img.shields.io/badge/license-GPLv3-purple)
+[![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/riskportal/network-publication/main/LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
-![Platforms](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey)
 
 This repository provides Jupyter notebooks and datasets necessary to reproduce the figures from the RISK publication.
 
@@ -80,13 +80,20 @@ With the virtual environment activated, install Jupyter Notebook:
 pip install jupyter
 ```
 
-### Step 5: Install RISK
+### Step 5: Clone Repository
 
 ```bash
-pip install risk-network
+git clone https://github.com/riskportal/network-publication.git
+cd network-publication
 ```
 
-### Step 6: Launch Jupyter Notebook
+### Step 6: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 7: Launch Jupyter Notebook
 
 ```bash
 jupyter notebook
