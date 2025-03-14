@@ -1,10 +1,10 @@
-import os
-import time
 import gc
-import psutil
-import tracemalloc
 import json
-import sys
+import os
+import psutil
+import time
+import tracemalloc
+
 from risk import RISK
 
 
