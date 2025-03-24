@@ -1,3 +1,8 @@
+"""
+risk_network/supp_fig_10
+~~~~~~~~~~~~~~~~~~~~~~~~
+"""
+
 import gc
 import json
 import os
@@ -5,12 +10,13 @@ import psutil
 import time
 import tracemalloc
 
+import statistics
+
 from risk import RISK
 
 
 def measure_performance(func, *args, **kwargs):
-    """
-    Measure the execution time, CPU time, and memory usage of a function.
+    """Measure the execution time, CPU time, and memory usage of a function.
 
     Args:
         func (callable): The function to measure.
@@ -20,22 +26,25 @@ def measure_performance(func, *args, **kwargs):
     Returns:
         tuple: (result of the function, performance metrics dict)
     """
+    # Start measuring performance
     start_time = time.time()
     process = psutil.Process()
     cpu_times_before = process.cpu_times()
     memory_before = process.memory_info().rss / (1024**2)  # Convert to MB
-
+    # Start tracing memory
     tracemalloc.start()
 
+    # Execute the function
     result = func(*args, **kwargs)
-
+    # Stop tracing memory
     current, peak = tracemalloc.get_traced_memory()
     tracemalloc.stop()
 
+    # End measuring performance
     end_time = time.time()
     cpu_times_after = process.cpu_times()
     memory_after = process.memory_info().rss / (1024**2)  # Convert to MB
-
+    # Calculate performance metrics
     metrics = {
         "execution_time": end_time - start_time,
         "cpu_user_time": cpu_times_after.user - cpu_times_before.user,
@@ -43,6 +52,7 @@ def measure_performance(func, *args, **kwargs):
         "memory_usage": memory_after - memory_before,
         "peak_memory_usage": peak / (1024**2),  # Convert to MB
     }
+
     return result, metrics
 
 
@@ -54,8 +64,7 @@ def benchmark_risk_workflow(
     max_workers=6,
     num_runs=5,
 ):
-    """
-    Benchmark the RISK workflow as a single block combining all operations.
+    """Benchmark the RISK workflow as a single block combining all operations.
 
     Args:
         file_path (str): Path to the network file (.gpickle).
@@ -68,9 +77,11 @@ def benchmark_risk_workflow(
     Returns:
         dict: Benchmark metrics with averages and standard deviations.
     """
+    # Initialize the RISK object
     risk = RISK(verbose=False)
     combined_metrics = []
 
+    # Define the statistical test functions
     stat_test_funcs = {
         "binom": risk.load_neighborhoods_by_binom,
         "chi2": risk.load_neighborhoods_by_chi2,
@@ -78,10 +89,10 @@ def benchmark_risk_workflow(
         "poisson": risk.load_neighborhoods_by_poisson,
         "zscore": risk.load_neighborhoods_by_zscore,
     }
-
     for _ in range(num_runs):
 
         def execute_workflow():
+            """Execute the RISK workflow."""
             network = risk.load_gpickle_network(
                 file_path,
                 compute_sphere=False,
@@ -117,12 +128,16 @@ def benchmark_risk_workflow(
                 random_seed=887,
             )
 
+        # Measure the performance of the workflow
         _, workflow_metrics = measure_performance(execute_workflow)
         combined_metrics.append(workflow_metrics)
 
     def calculate_stats(metrics_list):
-        import statistics
+        """Calculate the average and standard deviation of the benchmark metrics.
 
+        Args:
+            metrics_list (list): List of benchmark metrics.
+        """
         return {
             "avg_execution_time": statistics.mean([m["execution_time"] for m in metrics_list]),
             "stdev_execution_time": (
@@ -156,7 +171,12 @@ def benchmark_risk_workflow(
 
 
 def write_json(data, file_path):
-    """Write data to a JSON file."""
+    """Write data to a JSON file.
+
+    Args:
+        data (dict): Data to write to the JSON file.
+        file_path (str): Path to the JSON file.
+    """
     with open(file_path, "w") as json_file:
         json.dump(data, json_file, indent=4)
 
@@ -170,8 +190,7 @@ def loop_and_benchmark_gpickle_files(
     max_workers=6,
     num_runs=5,
 ):
-    """
-    Loop through all `.gpickle` files in a directory, benchmark them, and save the results to JSON files.
+    """Loop through all `.gpickle` files in a directory, benchmark them, and save the results to JSON files.
 
     Args:
         gpickle_directory (str): Directory containing the `.gpickle` files.
@@ -182,8 +201,9 @@ def loop_and_benchmark_gpickle_files(
         max_workers (int): Number of workers for parallel computation. Defaults to 6.
         num_runs (int): Number of runs for averaging. Defaults to 5.
     """
+    # Create the output directory if it does not exist
     os.makedirs(json_output_directory, exist_ok=True)
-
+    # Sort the files by node count
     sorted_files = sorted(
         [
             (file_name, int(file_name.split("_")[4]))  # Extract node count from filename
@@ -193,13 +213,14 @@ def loop_and_benchmark_gpickle_files(
         key=lambda x: x[1],
     )
 
+    # Loop through the files and benchmark them
     for file_name, _ in sorted_files:
         file_path = os.path.join(gpickle_directory, file_name)
         base_name = os.path.splitext(file_name)[0]
         json_path = os.path.join(json_output_directory, f"{base_name}_benchmark.json")
 
+        # Process the file
         print(f"Processing {file_name}...")
-
         try:
             metrics = benchmark_risk_workflow(
                 file_path=file_path,
@@ -209,21 +230,23 @@ def loop_and_benchmark_gpickle_files(
                 max_workers=max_workers,
                 num_runs=num_runs,
             )
-
+            # Save the results to a JSON file
             write_json(metrics, json_path)
             print(f"Saved results to {json_path}")
         except Exception as e:
             print(f"Error processing {file_name}: {e}")
 
+        # Clean up
         del metrics
         gc.collect()
 
 
 if __name__ == "__main__":
+    # Source benchmark files from risk_network/data directory
     gpickle_directory = "./data/gpickle/benchmark"
     json_output_directory = "./data/json/benchmark/risk"
     mock_go_bp = json.load(open("./data/json/benchmark/20250125_1000_mock_go_bp_annotations.json"))
-
+    # Benchmark the RISK workflow
     loop_and_benchmark_gpickle_files(
         gpickle_directory=gpickle_directory,
         json_output_directory=json_output_directory,
