@@ -7,114 +7,121 @@
 <br>
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-yellow)
-![License](https://img.shields.io/badge/license-GPLv3-purple)
-[![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/riskportal/network-publication/main/LICENSE)
+![License](https://img.shields.io/badge/license-MIT-blue)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
 
-This repository provides Jupyter notebooks and datasets necessary to reproduce the figures from the RISK publication.
+This repository provides Jupyter notebooks and datasets necessary to reproduce all figures from the **RISK** and **SAFE** analyses described in:
 
-**Horecka et al., "RISK: a next-generation tool for biological network annotation and visualization", Bioinformatics, 2025.** [DOI: 10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
+**Horecka et al.**, *"RISK: a next-generation tool for biological network annotation and visualization"*, *Bioinformatics*, 2025.  
+[DOI: 10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
+
+---
 
 ## Repository Structure
 
-- **risk_network/** – Jupyter notebooks and processed datasets for RISK analyses, including clustering, annotation, and visualization.
-  - `fig_1_supp_fig_3_6_7_8.ipynb`
-  - `supp_fig_10.ipynb`
-  - `supp_fig_1_4.ipynb`
-  - `supp_fig_2_5.ipynb`
-  - `supp_fig_9.ipynb`
-  - `data/` – Processed datasets (cytoscape, gpickle, json)
+### `risk_network/`
 
-- **safe_network/** – Notebooks and data for SAFE analysis
-  - `supp_fig_10.ipynb`
-  - `supp_fig_1_2_3.ipynb`
-  - `data/` – Datasets processed for SAFE analysis.
-  - `safepy/` – SAFE utilities
+Jupyter notebooks and processed datasets for **RISK-based** clustering, annotation, and visualization:
+
+- `fig_1_supp_fig_3_6_7_8.ipynb` – Yeast PPI network analysis and functional annotation
+- `supp_fig_1_4.ipynb` – GI network analysis and comparison
+- `supp_fig_2_5.ipynb` – PPI cluster comparisons (RISK and SAFE)
+- `supp_fig_9.ipynb` – Citation network analysis (interdisciplinary RISK example)
+- `supp_fig_10.ipynb`, `supp_fig_10.py` – Benchmarking: RISK vs SAFE (execution time, memory)
+- `data/`
+  - `cytoscape/` – Cytoscape sessions (.cys)
+  - `gpickle/` – Graphs and benchmark networks
+  - `json/` – Annotation files and mappings
+
+### `safe_network/`
+
+Jupyter notebooks and datasets for **SAFE-based** overrepresentation analysis and benchmarking:
+
+- `supp_fig_3_4_5.ipynb` – SAFE overrepresentation and comparative layout for GI and PPI networks
+- `supp_fig_10.ipynb`, `supp_fig_10.py` – Benchmarking SAFE vs RISK performance
+- `data/`
+  - `cytoscape/` – Cytoscape sessions for SAFE output
+  - `gpickle/`, `json/`, `tar.gz/` – SAFE-ready network graphs, GO annotations, and mock data
+- `safepy/` – Lightweight Python implementation of SAFE, includes core logic and utilities
+
+---
 
 ## Installation
 
-To set up Python and Jupyter Notebook for RISK, follow these steps:
+To run the notebooks locally, follow these steps:
 
 ### Step 1: Install Python 3.8+
 
-Download and install Python 3.8 or higher from the official  
-[Python website](https://www.python.org/downloads/).
+Download and install Python 3.8 or higher from the [official website](https://www.python.org/downloads/).
 
-- **Windows Users:** During installation, check the box that says **Add Python to PATH**.  
-  If you missed this step, follow this [guide](https://datatofish.com/add-python-to-windows-path/) to manually set the PATH.
+> 💡 **Windows Tip:** Check the box for **Add Python to PATH** during install. If you missed it, [this guide](https://datatofish.com/add-python-to-windows-path/) can help.
 
-### Step 2: Create a Virtual Environment (Recommended)
+### Step 2: Create a Virtual Environment
 
-Set up a virtual environment to manage dependencies for RISK:
+- **Windows**
 
-- **Windows:**
-  
-  ```cmd
-  python -m venv risk-env
-  risk-env\Scripts\activate
-  ```
+```cmd
+python -m venv risk-env
+risk-env\Scripts\activate
+```
 
-- **macOS/Linux:**
-  
-  ```bash
-  python3 -m venv risk-env
-  source risk-env/bin/activate
-  ```
-
-### Step 3: Configure Jupyter Notebook to Use the Virtual Environment
-
-Ensure Jupyter recognizes the virtual environment by following  
-[this guide](https://janakiev.com/blog/jupyter-virtual-envs/).
-
-Then, select the environment inside Jupyter Notebook:
-
-1. Click **Kernel** in the menu.
-2. Choose **Change kernel**.
-3. Select your virtual environment (e.g., `risk-env`).
-
-### Step 4: Install Jupyter
-
-With the virtual environment activated, install Jupyter Notebook:
+- **macOS/Linux**
 
 ```bash
+python3 -m venv risk-env
+source risk-env/bin/activate
+```
+
+### Step 3: Install Jupyter and Dependencies
+
+```bash
+pip install -r requirements.txt
 pip install jupyter
 ```
 
-### Step 5: Clone Repository
+### Step 4: Clone This Repository
 
 ```bash
 git clone https://github.com/riskportal/network-publication.git
 cd network-publication
 ```
 
-### Step 6: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 7: Launch Jupyter Notebook
+### Step 5: Launch Jupyter Notebook
 
 ```bash
 jupyter notebook
 ```
 
+---
+
 ## Figure Reproduction
 
-The following Jupyter notebooks generate the manuscript figures:
+Use the following notebooks to regenerate all manuscript figures:
 
-- `fig_1_supp_fig_3_6_7_8.ipynb` – Yeast PPI network analysis
-- `supp_fig_1_4.ipynb` – Genetic interaction network results
-- `supp_fig_2_5.ipynb` – Additional cluster comparisons
-- `supp_fig_9.ipynb` – Analysis of the high-energy physics citation network, demonstrating RISK’s applicability beyond biological systems.
-- `supp_fig_10.ipynb` – Benchmarking execution time and memory usage
+### RISK Figures
+
+- `fig_1_supp_fig_3_6_7_8.ipynb` – Yeast PPI network annotation and layout
+- `supp_fig_1_4.ipynb` – GI network module analysis
+- `supp_fig_2_5.ipynb` – PPI comparisons (RISK vs SAFE)
+- `supp_fig_9.ipynb` – Citation network validation
+- `supp_fig_10.ipynb` – Benchmarking RISK vs SAFE
+
+### SAFE Figures
+
+- `supp_fig_3_4_5.ipynb` – SAFE-based GO BP overrepresentation (GI and PPI)
+- `supp_fig_10.ipynb` – Benchmarking SAFE (comparative execution time, memory usage)
+
+---
 
 ## Citation
 
-If you use RISK in your research, please cite:
+If you use RISK or SAFE benchmarking in your research, please cite:
 
-**Horecka et al.**, "RISK: a next-generation tool for biological network annotation and visualization", **Bioinformatics**, 2025. DOI: [10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
+**Horecka et al.**, *"RISK: a next-generation tool for biological network annotation and visualization"*, **Bioinformatics**, 2025.  
+DOI: [10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
+
+---
 
 ## License
 
-This tutorial follows the [MIT License](https://raw.githubusercontent.com/riskportal/network-publication/refs/heads/main/LICENSE?token=GHSAT0AAAAAACYL5VO637BFR7LYQDR57AYQZ6TBTJA).
+This repository is distributed under the [MIT License](https://raw.githubusercontent.com/riskportal/network-publication/main/LICENSE).
