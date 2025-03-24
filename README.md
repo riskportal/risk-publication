@@ -104,10 +104,10 @@ jupyter notebook
 The following Jupyter notebooks generate the manuscript figures:
 
 - `fig_1_supp_fig_3_6_7_8.ipynb` – Yeast PPI network analysis
-- `supp_fig_10.ipynb` – Benchmarking execution time and memory usage
 - `supp_fig_1_4.ipynb` – Genetic interaction network results
 - `supp_fig_2_5.ipynb` – Additional cluster comparisons
 - `supp_fig_9.ipynb` – Analysis of the high-energy physics citation network, demonstrating RISK’s applicability beyond biological systems.
+- `supp_fig_10.ipynb` – Benchmarking execution time and memory usage
 
 ## Citation
 
