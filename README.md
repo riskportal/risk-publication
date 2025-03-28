@@ -19,6 +19,8 @@ This repository provides Jupyter notebooks and datasets necessary to reproduce a
 
 ## Repository Structure
 
+This repository contains the notebooks and data needed to reproduce figures from the RISK and SAFE analyses. The full RISK source code is available at [riskportal/network](https://github.com/riskportal/network).
+
 ### `risk_network/`
 
 Jupyter notebooks and processed datasets for **RISK-based** clustering, annotation, and visualization:
