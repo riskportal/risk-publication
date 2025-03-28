@@ -23,25 +23,18 @@ This repository provides Jupyter notebooks and datasets necessary to reproduce a
 
 Jupyter notebooks and processed datasets for **RISK-based** clustering, annotation, and visualization:
 
-- `fig_1_supp_fig_3_6_7_8.ipynb` – Yeast PPI network analysis and functional annotation
-- `supp_fig_1_4.ipynb` – GI network analysis and comparison
-- `supp_fig_2_5.ipynb` – PPI cluster comparisons (RISK and SAFE)
-- `supp_fig_9.ipynb` – Citation network analysis (interdisciplinary RISK example)
-- `supp_fig_10.ipynb`, `supp_fig_10.py` – Benchmarking: RISK vs SAFE (execution time, memory)
-- `data/`
-  - `cytoscape/` – Cytoscape sessions (.cys)
-  - `gpickle/` – Graphs and benchmark networks
-  - `json/` – Annotation files and mappings
+- `fig_1_supp_fig_3_6_7_8.ipynb` – Yeast PPI network analysis, RISK workflow overview, GO BP enrichment, and comparison to SAFE
+- `supp_fig_1_4.ipynb` – GI network analysis (RISK) and side-by-side comparison with SAFE
+- `supp_fig_2_5.ipynb` – RISK analysis of the full yeast PPI network and comparative clustering (RISK vs SAFE)
+- `supp_fig_9.ipynb` – RISK analysis of a high-energy physics citation network (non-biological validation)
+- `supp_fig_10.ipynb`, `supp_fig_10.py` – Benchmarking: execution time and memory usage for RISK (vs SAFE) using synthetic networks
 
 ### `safe_network/`
 
 Jupyter notebooks and datasets for **SAFE-based** overrepresentation analysis and benchmarking:
 
-- `supp_fig_3_4_5.ipynb` – SAFE overrepresentation and comparative layout for GI and PPI networks
-- `supp_fig_10.ipynb`, `supp_fig_10.py` – Benchmarking SAFE vs RISK performance
-- `data/`
-  - `cytoscape/` – Cytoscape sessions for SAFE output
-  - `gpickle/`, `json/`, `tar.gz/` – SAFE-ready network graphs, GO annotations, and mock data
+- `supp_fig_3_4_5.ipynb` – SAFE-based annotation and domain export for GI and PPI networks, including pruned/full networks
+- `supp_fig_10.ipynb`, `supp_fig_10.py` – Benchmarking: execution time and memory usage for SAFE (vs RISK) on synthetic networks
 - `safepy/` – Lightweight Python implementation of SAFE, includes core logic and utilities
 
 ---
