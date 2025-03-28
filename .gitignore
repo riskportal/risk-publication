@@ -171,6 +171,7 @@ cython_debug/
 .pypirc
 
 # Custom
+.DS_Store
 scale_free_network_with_*
 !scale_free_network_with_500_nodes*
 
