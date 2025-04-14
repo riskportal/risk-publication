@@ -7,7 +7,7 @@
 <br>
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-yellow)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![License](https://img.shields.io/badge/license-GPLv3-purple)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
 
 This repository provides Jupyter notebooks and datasets necessary to reproduce all figures from the **RISK** and **SAFE** analyses described in:
@@ -123,4 +123,4 @@ DOI: [10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
 
 ## License
 
-This repository is distributed under the [MIT License](https://raw.githubusercontent.com/riskportal/network-publication/main/LICENSE).
+This repository is distributed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
