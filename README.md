@@ -17,6 +17,10 @@ This repository provides Jupyter notebooks and datasets necessary to reproduce a
 
 ---
 
+## Documentation
+
+Full documentation (with examples and usage guidance) is available at [https://riskportal.github.io/network-tutorial/](https://riskportal.github.io/network-tutorial/).
+
 ## Repository Structure
 
 This repository contains the notebooks and data needed to reproduce figures from the RISK and SAFE analyses. The full RISK source code is available at [riskportal/network](https://github.com/riskportal/network).
