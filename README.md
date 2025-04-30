@@ -121,9 +121,9 @@ Use the following notebooks to regenerate all manuscript figures:
 
 ## Citation
 
-If you use RISK or SAFE benchmarking in your research, please cite:
+If you use RISK or SAFE benchmarking in your research, please reference the following:
 
-**Horecka et al.**, *"RISK: a next-generation tool for biological network annotation and visualization"*, **Bioinformatics**, 2025.  
+**Horecka et al.**, *"RISK: a next-generation tool for biological network annotation and visualization"*, 2025.  
 DOI: [10.1234/zenodo.xxxxxxx](https://doi.org/10.1234/zenodo.xxxxxxx)
 
 ---
