@@ -4,7 +4,7 @@ networkx
 numpy
 pandas
 requests
-risk-network
+risk-network==0.0.11
 scikit-learn
 scipy
 statsmodels
