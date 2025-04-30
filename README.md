@@ -10,6 +10,13 @@
 ![License](https://img.shields.io/badge/license-GPLv3-purple)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
 
+> [!CAUTION]
+> 📌 **Note:** This repository is designed to work with `risk-network==0.0.11`, the version submitted for publication. To ensure compatibility with these notebooks and figures, please run:
+> 
+> ```bash
+> pip install risk-network==0.0.11
+> ```
+
 This repository provides Jupyter notebooks and datasets necessary to reproduce all figures from the **RISK** and **SAFE** analyses described in:
 
 **Horecka et al.**, *"RISK: a next-generation tool for biological network annotation and visualization"*, *Bioinformatics*, 2025.  
