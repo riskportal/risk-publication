@@ -11,7 +11,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
 
 > [!CAUTION]
-> 📌 **Note:** This repository is designed to work with `risk-network==0.0.11`, the version submitted for publication. To ensure compatibility with these notebooks and figures, please run:
+> This repository is designed to work with `risk-network==0.0.11`, the version submitted for publication. To ensure compatibility with these notebooks and figures, please run:
 > 
 > ```bash
 > pip install risk-network==0.0.11
