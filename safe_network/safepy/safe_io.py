@@ -233,10 +233,17 @@ def load_network_from_cys(filename, view_name=None, verbose=True):
 
     attributes["SUID"] = attributes["SUID"].astype(int)
 
+    # Columns whose names would collide with layout coords from the view
+    _reserved_pos_cols = {"x", "y", "X", "Y", "X Location", "Y Location"}
+
     for ix_row, row in attributes.iterrows():
-        if row["SUID"] in G.nodes:
+        n = row["SUID"]
+        if n in G.nodes:
             for c in col_headers[1:]:
-                G.nodes[row["SUID"]][c] = row[c]
+                # Never overwrite x/y parsed from the view
+                if c in _reserved_pos_cols:
+                    continue
+                G.nodes[n][c] = row[c]
 
     # Relabel the node ids to sequential numbers to make calculations faster
     mapping = dict()
