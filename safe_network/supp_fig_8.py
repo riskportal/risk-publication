@@ -1,6 +1,6 @@
 """
-safe_network/supp_fig_10
-~~~~~~~~~~~~~~~~~~~~~~~~
+safe_network/supp_fig_8
+~~~~~~~~~~~~~~~~~~~~~~~
 """
 
 import gc
