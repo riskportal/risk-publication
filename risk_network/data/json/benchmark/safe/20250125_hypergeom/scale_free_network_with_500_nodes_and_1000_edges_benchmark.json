@@ -1,0 +1,12 @@
+{
+    "avg_execution_time": 1.000908374786377,
+    "stdev_execution_time": 0.017777235063671876,
+    "avg_cpu_user_time": 1.238,
+    "stdev_cpu_user_time": 0.01923538406167112,
+    "avg_cpu_system_time": 0.33199999999999996,
+    "stdev_cpu_system_time": 0.04086563348340518,
+    "avg_memory_usage": 12.9625,
+    "stdev_memory_usage": 22.25258297446938,
+    "avg_peak_memory_usage": 67.01509227752686,
+    "stdev_peak_memory_usage": 0.07552130569619044
+}
