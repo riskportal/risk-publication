@@ -60,7 +60,7 @@ To run the notebooks locally, follow these steps:
 
 Download and install Python 3.8 or higher from the [official website](https://www.python.org/downloads/).
 
-> 💡 **Windows Tip:** Check the box for **Add Python to PATH** during install. If you missed it, [this guide](https://datatofish.com/add-python-to-windows-path/) can help.
+> **Windows Tip:** Check the box for **Add Python to PATH** during install. If you missed it, [this guide](https://datatofish.com/add-python-to-windows-path/) can help.
 
 ### Step 2: Create a Virtual Environment
 
