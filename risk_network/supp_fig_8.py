@@ -1,6 +1,6 @@
 """
-risk_network/supp_fig_10
-~~~~~~~~~~~~~~~~~~~~~~~~
+risk_network/supp_fig_8
+~~~~~~~~~~~~~~~~~~~~~~~
 """
 
 import gc
@@ -83,30 +83,30 @@ def benchmark_risk_workflow(
 
     # Define the statistical test functions
     stat_test_funcs = {
-        "binom": risk.load_neighborhoods_by_binom,
-        "chi2": risk.load_neighborhoods_by_chi2,
-        "hypergeom": risk.load_neighborhoods_by_hypergeom,
-        "poisson": risk.load_neighborhoods_by_poisson,
-        "zscore": risk.load_neighborhoods_by_zscore,
+        "binom": risk.load_neighborhoods_binom,
+        "chi2": risk.load_neighborhoods_chi2,
+        "hypergeom": risk.load_neighborhoods_hypergeom,
+        "poisson": risk.load_neighborhoods_poisson,
+        "zscore": risk.load_neighborhoods_zscore,
     }
     for _ in range(num_runs):
 
         def execute_workflow():
             """Execute the RISK workflow."""
-            network = risk.load_gpickle_network(
+            network = risk.load_network_gpickle(
                 file_path,
                 compute_sphere=False,
                 surface_depth=0.0,
                 min_edges_per_node=0,
             )
-            annotations = risk.load_dict_annotation(
+            annotation = risk.load_annotation_dict(
                 network=network,
                 content=annotations_content,
             )
             if stat_test == "permutation":
-                return risk.load_neighborhoods_by_permutation(
+                return risk.load_neighborhoods_permutation(
                     network=network,
-                    annotations=annotations,
+                    annotation=annotation,
                     distance_metric="louvain",
                     louvain_resolution=2,
                     fraction_shortest_edges=0.20,
@@ -120,7 +120,7 @@ def benchmark_risk_workflow(
             stat_test_func = stat_test_funcs[stat_test]
             return stat_test_func(
                 network=network,
-                annotations=annotations,
+                annotation=annotation,
                 distance_metric="louvain",
                 louvain_resolution=2,
                 fraction_shortest_edges=0.20,
@@ -137,6 +137,9 @@ def benchmark_risk_workflow(
 
         Args:
             metrics_list (list): List of benchmark metrics.
+
+        Returns:
+            dict: Dictionary with average and standard deviation of each metric.
         """
         return {
             "avg_execution_time": statistics.mean([m["execution_time"] for m in metrics_list]),
