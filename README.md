@@ -7,7 +7,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
 
 > [!CAUTION]
-> This repository is designed to work with `risk-network==0.0.14`, the version submitted for publication. To ensure compatibility with these notebooks and figures, please run:
+> This repository is designed to work with `risk-network==0.0.14`. To ensure compatibility with these notebooks and figures, please run:
 >
 > ```bash
 > pip install risk-network==0.0.14
@@ -23,11 +23,11 @@ DOI: [10.5281/zenodo.xxxxxxx](https://doi.org/10.5281/zenodo.xxxxxxx)
 
 ## Documentation
 
-Full documentation (with examples and usage guidance) is available at [https://riskportal.github.io/network-tutorial/](https://riskportal.github.io/network-tutorial/).
+Full documentation (with examples and usage guidance) is available at [https://riskportal.github.io/risk-docs/](https://riskportal.github.io/risk-docs/).
 
 ## Repository Structure
 
-This repository contains the notebooks and data needed to reproduce figures from the RISK and SAFE analyses. The full RISK source code is available at [riskportal/network](https://github.com/riskportal/network).
+This repository contains the notebooks and data needed to reproduce figures from the RISK and SAFE analyses. The full RISK source code is available at [riskportal/risk](https://github.com/riskportal/risk).
 
 ### `risk_network/`
 
@@ -84,7 +84,7 @@ pip install jupyter
 ### Step 4: Clone This Repository
 
 ```bash
-git clone https://github.com/riskportal/network-publication.git
+git clone https://github.com/riskportal/risk-publication.git
 cd network-publication
 ```
 
