@@ -1,1 +1,1 @@
-Gpickle files for stress test benchmark (supp. fig. 5) are found in network-publication/risk_network/data/gpickle/benchmark
+GPickle files for stress test benchmark (supp. fig. 5) are found in network-publication/risk_network/data/gpickle/benchmark
