@@ -14,7 +14,7 @@ This repository provides Jupyter notebooks and datasets necessary to reproduce a
 
 **Horecka and Röst (2025)**, _"RISK: a next-generation tool for biological network annotation and visualization"_.
 <br>
-DOI: [10.5281/zenodo.xxxxxxx](https://doi.org/10.5281/zenodo.xxxxxxx)
+DOI: [10.5281/zenodo.17257418](https://doi.org/10.5281/zenodo.17257418)
 
 ---
 
@@ -117,7 +117,7 @@ If you use RISK in your research, please cite the following:
 
 **Horecka and Röst (2025)**, _"RISK: a next-generation tool for biological network annotation and visualization"_.
 <br>
-DOI: [10.5281/zenodo.xxxxxxx](https://doi.org/10.5281/zenodo.xxxxxxx)
+DOI: [10.5281/zenodo.17257418](https://doi.org/10.5281/zenodo.17257418)
 
 ---
 
