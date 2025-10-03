@@ -82,7 +82,7 @@ pip install jupyter
 
 ```bash
 git clone https://github.com/riskportal/risk-publication.git
-cd network-publication
+cd risk-publication
 ```
 
 ### Step 5: Launch Jupyter Notebook
