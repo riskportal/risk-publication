@@ -1,16 +1,14 @@
 # RISK Publication
 
-<br>
-
 ![Python](https://img.shields.io/badge/python-3.8%2B-yellow)
 ![License](https://img.shields.io/badge/license-GPLv3-purple)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)
 
 > [!CAUTION]
-> This repository is designed to work with `risk-network==0.0.14`. To ensure compatibility with these notebooks and figures, please run:
+> This repository is designed to work with `risk-network==0.0.15`. To ensure compatibility with these notebooks and figures, please run:
 >
 > ```bash
-> pip install risk-network==0.0.14
+> pip install risk-network==0.0.15
 > ```
 
 This repository provides Jupyter notebooks and datasets necessary to reproduce all figures from the analyses described in:
