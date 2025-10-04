@@ -100,14 +100,15 @@ Use the following notebooks to regenerate all manuscript figures:
 ### RISK Figures
 
 - `fig_1_supp_fig_2_4_5_6.ipynb` – Yeast PPI network annotation and layout
-- `supp_fig_1_3.ipynb` – GI network module analysis
-- `supp_fig_7.ipynb` – Citation network validation
-- `supp_fig_8.ipynb` – Benchmarking RISK vs SAFE
+- `supp_fig_1_3.ipynb` – Yeast GI network module analysis
+- `supp_fig_7.ipynb` – High-energy physics citation network analysis
+- `supp_fig_8.ipynb` – Benchmarking RISK vs. SAFE (execution time and memory usage)
 
 ### SAFE Figures
 
-- `supp_fig_2_4.ipynb` – SAFE-based GO BP overrepresentation (GI and PPI)
-- `supp_fig_8.ipynb` – Benchmarking SAFE (comparative execution time, memory usage)
+- `supp_fig_2_4.ipynb` – GO BP overrepresentation (GI and PPI networks)
+- `supp_fig_7_attempt.ipynb` – Citation network analysis attempt
+- `supp_fig_8.ipynb` – Benchmarking SAFE (execution time and memory usage)
 
 ---
 
