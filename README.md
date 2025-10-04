@@ -28,20 +28,21 @@ This repository contains the notebooks and data needed to reproduce figures from
 
 ### `risk_network/`
 
-Jupyter notebooks and processed datasets for **RISK-based** clustering, annotation, and visualization:
+Jupyter notebooks and processed datasets for **RISK-based** clustering, annotation, and benchmarking:
 
 - `fig_1_supp_fig_2_4_5_6.ipynb` – Yeast PPI network analysis, GO BP enrichment, and comparison to SAFE
-- `supp_fig_1_3.ipynb` – GI network analysis and side-by-side comparison with SAFE
-- `supp_fig_7.ipynb` – RISK analysis of a high-energy physics citation network (non-biological validation)
-- `supp_fig_8.ipynb`, `supp_fig_8.py` – Benchmarking execution time and memory usage for RISK (vs SAFE) using synthetic networks
+- `supp_fig_1_3.ipynb` – Yeast GI network analysis and comparison to SAFE
+- `supp_fig_7.ipynb` – High-energy physics citation network analysis (non-biological validation)
+- `supp_fig_8.ipynb`, `supp_fig_8.py` – Benchmarking execution time and memory usage (RISK vs. SAFE)
 
 ### `safe_network/`
 
 Jupyter notebooks and datasets for **SAFE-based** overrepresentation analysis and benchmarking:
 
-- `supp_fig_2_4.ipynb` – SAFE-based annotation and domain export for GI and PPI networks
-- `supp_fig_8.ipynb`, `supp_fig_8.py` – Benchmarking execution time and memory usage for SAFE (vs RISK) on synthetic networks
-- `safepy/` – Python implementation of SAFE, includes core logic and utilities
+- `supp_fig_2_4.ipynb` – GO BP overrepresentation for GI and PPI networks
+- `supp_fig_7_attempt.ipynb` – Citation network analysis attempt
+- `supp_fig_8.ipynb`, `supp_fig_8.py` – Benchmarking execution time and memory usage (SAFE vs. RISK)
+- `safepy/` – Python implementation of SAFE with core logic and utilities
 
 ---
 
