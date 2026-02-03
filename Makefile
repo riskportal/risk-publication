@@ -1,4 +1,6 @@
-black: ## Black format only python files to line length 100
+# RISK Publication Makefile
+
+Format: ## Format only python files to line length 100
 	black --line-length=100 ./
 	make clean
 
