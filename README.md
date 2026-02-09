@@ -12,10 +12,12 @@
 > ```
 
 This repository provides Jupyter notebooks and datasets necessary to reproduce all figures from the analyses described in:
-
-**Horecka and Röst (2026)**, _"RISK: a next-generation tool for biological network annotation and visualization"_.
 <br>
-DOI: [10.5281/zenodo.17257418](https://doi.org/10.5281/zenodo.17257418)
+Horecka, I., and Röst, H. (2026)
+<br>
+_RISK: a next-generation tool for biological network annotation and visualization_
+<br>
+Bioinformatics. https://doi.org/10.1093/bioinformatics/btaf669
 
 ---
 
@@ -114,13 +116,19 @@ Use the following notebooks to regenerate all manuscript figures:
 
 ---
 
-## Citation
+### Primary citation
 
-If you use RISK in your research, please cite the following:
-
-**Horecka and Röst (2026)**, _"RISK: a next-generation tool for biological network annotation and visualization"_.
+Horecka, I., and Röst, H. (2026)
 <br>
-DOI: [10.5281/zenodo.17257418](https://doi.org/10.5281/zenodo.17257418)
+_RISK: a next-generation tool for biological network annotation and visualization_
+<br>
+Bioinformatics. https://doi.org/10.1093/bioinformatics/btaf669
+
+### Software archive
+
+RISK software for the published manuscript.
+<br>
+Zenodo. https://doi.org/10.5281/zenodo.17257418
 
 ---
 
