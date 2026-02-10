@@ -19,8 +19,6 @@ _RISK: a next-generation tool for biological network annotation and visualizatio
 <br>
 Bioinformatics. https://doi.org/10.1093/bioinformatics/btaf669
 
----
-
 ## Documentation
 
 Full documentation (with examples and usage guidance) is available at [https://riskportal.github.io/risk-docs/](https://riskportal.github.io/risk-docs/).
@@ -46,8 +44,6 @@ Jupyter notebooks and datasets for **SAFE-based** overrepresentation analysis an
 - `supp_fig_7_attempt.ipynb` – Citation network analysis attempt
 - `supp_fig_8.ipynb`, `supp_fig_8.py` – Benchmarking execution time and memory usage (SAFE vs. RISK)
 - `safepy/` – Python implementation of SAFE with core logic and utilities
-
----
 
 ## Installation
 
@@ -95,8 +91,6 @@ cd risk-publication
 jupyter notebook
 ```
 
----
-
 ## Figure Reproduction
 
 Use the following notebooks to regenerate all manuscript figures:
@@ -114,8 +108,6 @@ Use the following notebooks to regenerate all manuscript figures:
 - `supp_fig_7_attempt.ipynb` – Citation network analysis attempt
 - `supp_fig_8.ipynb` – Benchmarking SAFE (execution time and memory usage)
 
----
-
 ### Primary citation
 
 Horecka, I., and Röst, H. (2026)
@@ -129,8 +121,6 @@ Bioinformatics. https://doi.org/10.1093/bioinformatics/btaf669
 RISK software for the published manuscript.
 <br>
 Zenodo. https://doi.org/10.5281/zenodo.17257418
-
----
 
 ## License
 
