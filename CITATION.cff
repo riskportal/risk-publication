@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use the RISK publication data, analysis scripts, workflows, or software, please cite the Bioinformatics paper."
+title: "RISK Publication Data and Analysis Workflows"
+abstract: "The RISK publication repository contains processed datasets, analysis scripts, and workflows used to generate the results and figures for the Bioinformatics article introducing RISK, a scalable tool for network annotation and visualization."
+authors:
+  - family-names: Horecka
+    given-names: Ira
+    orcid: "https://orcid.org/0009-0001-3087-7087"
+  - family-names: Röst
+    given-names: Hannes
+    orcid: "https://orcid.org/0000-0003-0990-7488"
+type: software
+license: GPL-3.0-or-later
+repository-code: "https://github.com/riskportal/risk-publication"
+url: "https://riskportal.github.io/risk-docs/"
+keywords:
+  - RISK publication
+  - reproducible analysis
+  - bioinformatics workflow
+  - biological network analysis
+  - protein-protein interaction networks
+  - genetic interaction networks
+  - high-energy physics citation network
+  - SAFE comparison
+  - network annotation
+  - network visualization
+  - scalability benchmark
+preferred-citation:
+  type: article
+  title: "RISK: a next-generation tool for biological network annotation and visualization"
+  authors:
+    - family-names: Horecka
+      given-names: Ira
+      orcid: "https://orcid.org/0009-0001-3087-7087"
+    - family-names: Röst
+      given-names: Hannes
+      orcid: "https://orcid.org/0000-0003-0990-7488"
+  journal: Bioinformatics
+  year: 2026
+  doi: "10.1093/bioinformatics/btaf669"
